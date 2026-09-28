@@ -1,0 +1,5 @@
+/*
+!/.gitignore
+!/semana01/
+bin/
+*.class
