@@ -1,15 +1,27 @@
 package semana02;
 
 public class Cuenta {
-	String titular;
-	String numeroCuenta;
-	double saldo;
+	private String titular;
+	private String numeroCuenta;
+	private double saldo;
 	
 	//constructor
 	public Cuenta(String titular, String numeroCuenta, double saldo) {
 		this.titular = titular;
 		this.numeroCuenta = numeroCuenta;
 		this.saldo = saldo;
+	}
+	
+	public String getTitular() {
+		return this.titular;
+	}
+	
+	public String getNumeroCuenta() {
+		return this.numeroCuenta;
+	}
+	
+	public double getSaldo() {
+		return this.saldo;
 	}
 	
 	public void depositar(double monto) {

@@ -7,6 +7,10 @@ public class Banco {
 		Cuenta c1 = new Cuenta("Anngie", "123456789", 1000);
 		Cuenta c2 = new Cuenta("Michael", "987654321", 2000);
 		
+		
+		double saldo =c1.getSaldo();
+		
+		System.out.println(saldo);
 		c1.depositar(200);
 		c1.retirar(20);
 		c1.retirar(5000);
