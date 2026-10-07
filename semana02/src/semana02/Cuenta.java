@@ -3,7 +3,7 @@ package semana02;
 public class Cuenta {
 	private String titular;
 	private String numeroCuenta;
-	private double saldo;
+	protected double saldo;
 	
 	//constructor
 	public Cuenta(String titular, String numeroCuenta, double saldo) {

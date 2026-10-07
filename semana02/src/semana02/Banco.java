@@ -4,11 +4,15 @@ public class Banco {
 
 	public static void main(String[] args) {
 		
-		CuentaAhorro ca1 = new CuentaAhorro("Maria", "546123789", 1000, 5);
+		Cuenta[] cuentas= {
+				new Cuenta("Anngie", "123456789", 1000),
+				new CuentaCorriente("Michael", "987456123", 1000, 500)
+		};
 		
-		ca1.aplicarInteres();
-		ca1.mostrarInfo();
-		
+		for (Cuenta c : cuentas) {
+			c.retirar(1200);
+			c.mostrarInfo();
+		}
 	}
 
 }
