@@ -24,23 +24,24 @@ public class Cuenta {
 		return this.saldo;
 	}
 	
-	public void depositar(double monto) {
+	public boolean depositar(double monto) {
 		if(monto>0) {
 			this.saldo = this.saldo + monto;
-			System.out.println(this.titular + " Realizaste un deposito de: S/" + monto);
+			return true;
 		}else {
 			System.out.println("Monto invalido!!");
+			return false;
 		}
 	}
 	
-	public void retirar(double monto) {
+	public boolean retirar(double monto) {
 		if(monto<=0) {
-			System.out.println(this.titular + " El monto ingresado es invalido!!");
+			return false;
 		}else if(monto>this.saldo) {
-			System.out.println(this.titular + " Tu saldo es insuficiente!!");
+			return false;
 		}else {
 			this.saldo = this.saldo - monto;
-				System.out.println(this.titular + " Realizaste un retiro de: S/" + monto);
+				return true;
 		}
 	}
 	

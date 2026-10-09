@@ -38,4 +38,22 @@ public class Banco {
 		}
 		return null;
 	}
+	
+	public void transferir(String numOrigen, String numDestino, double monto) {
+		Cuenta origen = buscarCuenta(numOrigen);
+		Cuenta destino = buscarCuenta(numDestino);
+		if(origen == null || destino == null )  {
+			System.out.println("Cuenta no encontrada");
+		}else if(origen == destino){
+			System.out.println("La cuenta de destino es la misma que la origen!!");
+		}else{
+			if(origen.retirar(monto)) {
+				destino.depositar(monto);
+				System.out.println("Transferencia exitosa!!");
+			}else {
+				System.out.println("Transferencia fallida: Monto invalido o saldo insuficiente");
+			}
+			
+		}
+	}
 }

@@ -14,13 +14,15 @@ public class App {
 		
 		b.mostrarCuentas();
 	
-		Cuenta encontrada = b.buscarCuenta("555");
-		if( encontrada == null) {
-			System.out.println("No existe esa cuenta!!");
-		}else {
-			System.out.println("Cuenta si encontrada");
-			encontrada.mostrarInfo();
-		}
+		b.transferir("111", "222", 300);
+		c1.mostrarInfo();
+		ca1.mostrarInfo();
+		
+		b.transferir("111", "222", 5000);
+		
+		b.transferir("111", "999", 5000);
+		
+		b.transferir("111", "111", 200);
 		
 	}
 

@@ -9,15 +9,14 @@ public class CuentaCorriente extends Cuenta {
 	}
 
 	@Override
-	public void retirar(double monto) {
+	public boolean retirar(double monto) {
 		if (monto <= 0) {
-			System.out.println("Monto invalido!!");
+			return false;
 		} else if (monto > this.saldo + this.limiteSobregiro) {
-			System.out.println("Excede el limite de sobregiro!!");
+			return false;
 		} else {
 			this.saldo = this.saldo - monto;
-
-			System.out.println(getTitular() + " queda con: S/" + this.saldo);
+			return true;
 		}
 	}
 
